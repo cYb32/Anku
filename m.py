@@ -232,7 +232,7 @@ def handle_bgmi(message):
             response = "✅ Usage :- /bgmi <target> <port> <time>"  # Updated command syntax
     else:
         response = """❌ You Are Not Authorized To Use This Command ❌.
-                      🛒 Please Buy From @DEXTER"""
+                      🛒 Please Buy From @ankurdutta39"""
 
     bot.reply_to(message, response)
 
@@ -261,17 +261,17 @@ def show_command_logs(message):
 
 @bot.message_handler(commands=['help'])
 def show_help(message):
-    help_text ='''🤖 Available commands:
-🚀 /bgmi : Method For Bgmi Servers. 
-🚀 /rules : Please Check Before Use !!.
-🚀 /mylogs : To Check Your Recents Attacks.
-🚀 /plan : Checkout Our Botnet Rates.
+    help_text ='''Available commands:
+ /bgmi : Method For Bgmi Servers. 
+ /rules : Please Check Before Use !!.
+ /mylogs : To Check Your Recents Attacks.
+ /plan : Checkout Our Botnet Rates.
 
-🤖 To See Admin Commands:
-💥 /admincmd : Shows All Admin Commands.
+ To See Admin Commands:
+ /admincmd : Shows All Admin Commands.
 
-🚀 Buy From :- @DEXTER
-🚀 Official Channel :- https://t.me/APKMY
+ Buy From :- @ankurdutta39
+ Official Channel :- https://t.me/dexterddos
 '''
     for handler in bot.message_handlers:
         if hasattr(handler, 'commands'):
@@ -286,9 +286,7 @@ def show_help(message):
 @bot.message_handler(commands=['start'])
 def welcome_start(message):
     user_name = message.from_user.first_name
-    response = f'''👋🏻Welcome to The Dex_DdosBot
-                    🤖Feel Free to Explore. 
-                    '''
+    response = '''Welcome to The Dex_DdosBoot | Feel Free to Explore.'''
     bot.reply_to(message, response)
 
 @bot.message_handler(commands=['rules'])
@@ -305,12 +303,12 @@ def welcome_plan(message):
     response = f'''{user_name}, Our Bgmi Ddos Plans:
 
 
-𝗕𝗚𝗠𝗜 𝗗𝗗𝗢𝗦 𝗛𝗔𝗖𝗞 𝗣𝗟𝗔𝗡𝗦
-1 𝗛𝗢𝗨𝗥 :- 60𝗥𝗦 [ 240𝘀𝗲𝗰 ]
-1 𝗱𝗮𝘆 = 180𝗿𝘀 [ 240𝘀𝗲𝗰 ] 
-2 𝗱𝗮𝘆 = 280𝗿𝘀 [ 240𝘀𝗲𝗰 ]
-3 𝗱𝗮𝘆 = 370𝗿𝘀 [ 240𝘀𝗲𝗰 ]
-7 𝗱𝗮𝘆 = 800𝗿𝘀 [ 240𝘀𝗲𝗰 ]
+𝗕𝗚𝗠𝗜 𝗗𝗗𝗢𝗦 𝗣𝗟𝗔𝗡𝗦 :
+1 HOUR= ₹60  [ 240𝘀𝗲𝗰 ]
+1 DAY = ₹180 [ 240𝘀𝗲𝗰 ] 
+2 DAY = ₹280 [ 240𝘀𝗲𝗰 ]
+3 DAY = ₹370 [ 240𝘀𝗲𝗰 ]
+7 DAY = ₹800 [ 240𝘀𝗲𝗰 ]
 '''
     bot.reply_to(message, response)
 
@@ -319,12 +317,12 @@ def welcome_plan(message):
     user_name = message.from_user.first_name
     response = f'''{user_name}, Admin Commands Are Here!!:
 
-💥 /add <userId> : Add a User.
-💥 /remove <userid> Remove a User.
-💥 /allusers : Authorized Users Lists.
-💥 /logs : All Users Logs.
-💥 /broadcast : Broadcast a Message.
-💥 /clearlogs : Clear The Logs File.
+ /add <userId> : Add a User.
+ /remove <userid> Remove a User.
+ /allusers : Authorized Users Lists.
+ /logs : All Users Logs.
+ /broadcast : Broadcast a Message.
+ /clearlogs : Clear The Logs File.
 '''
     bot.reply_to(message, response)
 
@@ -335,7 +333,7 @@ def broadcast_message(message):
     if user_id in admin_id:
         command = message.text.split(maxsplit=1)
         if len(command) > 1:
-            message_to_broadcast = "⚠️ Message To All Users By Admin:\n\n" + command[1]
+            message_to_broadcast = "ATTENTION!!!⚠️ Message To All Users By Admin:\n\n" + command[1]
             with open(USER_FILE, "r") as file:
                 user_ids = file.read().splitlines()
                 for user_id in user_ids:
